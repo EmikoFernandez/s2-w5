@@ -1,12 +1,19 @@
 public class Plant{
+    public static final boolean usesChlorophyll = true;
+    public static int numPlants;
     private int age;
     private String name;
     private double height;
+    private final String species;
 
-    public Plant (String name){
-          age = 0;
+    public Plant (String name, String species){
           this.name = name;
-          height = 0;
+          this.species = species;
+          numPlants++;
+    }
+
+    public static int getNumPlants(){
+        return numPlants;
     }
 
     public String type(){
@@ -23,4 +30,5 @@ public class Plant{
     public int age(){
         return age;
     }
+
 }

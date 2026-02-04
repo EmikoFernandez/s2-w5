@@ -29,7 +29,12 @@ public class AQIAnalyzer {
 
         // TODO 1: Calculate the average AQI
         int sum = 0;
+        int total = 0;
         // Your code here
+        for(int i = 0; i < aqiData.length; i++){
+            total += aqiData[i];
+        }
+        sum = total/aqiData.length;
 
         // TODO 2: Find the maximum AQI
         int max = aqiData[0];
